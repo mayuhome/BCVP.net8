@@ -20,12 +20,14 @@ namespace BCVP.net8.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public async Task<List<UserVo>> Get()
+ 
+
+        [HttpGet(Name = "getRole")]
+        public async Task<object> GetRole()
         {
-            var userService = new UserService();
-            var userList = await userService.Query();
-            return userList;
+            var baseService = new BaseService<RoleVo>();
+            var baseList = await baseService.Query();
+            return baseList;
         }
     }
 }

@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace BCVP.net8.Repository
 {
-    public class UserRepository : IUserRepository
+    public class BaseRepository : IUserRepository
     {
         public async Task<List<User>> Query()
         {

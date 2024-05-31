@@ -8,7 +8,7 @@ namespace BCVP.net8.Service
     {
         public async Task<List<UserVo>> Query()
         {
-            var userRepo = new UserRepository();
+            var userRepo = new BaseRepository();
             var users = await userRepo.Query();
             return users.Select(d => new UserVo() { UserName = d.Name }).ToList();
         }
