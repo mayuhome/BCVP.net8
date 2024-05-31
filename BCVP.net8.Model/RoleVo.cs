@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BCVP.net8.Model
 {
-    public class UserVo
+    public class RoleVo
     {
-        public string? UserName { get; set; }
+        public string? Name { get; set; }
     }
 }
