@@ -8,6 +8,6 @@ namespace BCVP.net8.Model
 {
     public class RoleVo
     {
-        public string? Name { get; set; }
+        public string? RoleName { get; set; }
     }
 }

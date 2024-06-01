@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BCVP.net8.IService
 {
-    public interface IBaseService<TEntity> where TEntity : class, new()
+    public interface IBaseService<TEntity,TVo> where TEntity : class, new()
     {
-        public Task<List<TEntity>> Query();
+        public Task<List<TVo>> Query();
     }
 }
