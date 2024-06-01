@@ -1,4 +1,7 @@
 
+using BCVP.net8.Extensions;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace BCVP.net8
 {
     public class Program
@@ -13,6 +16,9 @@ namespace BCVP.net8
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
+            AutoMapperConfig.RegisterMappings();
 
             var app = builder.Build();
 
